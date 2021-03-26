@@ -2304,7 +2304,7 @@ bool Version::MaybeInitializeFileMetaData(FileMetaData* file_meta) {
                     file_meta->fd.GetNumber(), s.ToString().c_str());
     return false;
   }
-  if (tp.get() == nullptr) return false;
+  if (tp == nullptr) return false;
   file_meta->num_entries = tp->num_entries;
   file_meta->num_deletions = tp->num_deletions;
   file_meta->raw_value_size = tp->raw_value_size;

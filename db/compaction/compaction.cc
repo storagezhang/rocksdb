@@ -340,7 +340,7 @@ bool Compaction::IsTrivialMove() const {
       return false;
     }
 
-    if (partitioner.get() != nullptr) {
+    if (partitioner != nullptr) {
       if (!partitioner->CanDoTrivialMove(file->smallest.user_key(),
                                          file->largest.user_key())) {
         return false;
